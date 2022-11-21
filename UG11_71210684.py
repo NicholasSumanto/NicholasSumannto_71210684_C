@@ -37,9 +37,7 @@ class RakObat:
         key_hash = self._getHash(jenisObat)
         if (self.map[key_hash] is not None) and (self.map[key_hash] != 'deleted'):
             for index in range(self.size):
-                #mencari dengan melakukan probing
                 key_hash = self._linearProbing(jenisObat, index)
-                # periksa apakah key adalah data yg akan dihapus
                 if(self.map[key_hash][0][0] == jenisObat):
                     return self.map[key_hash][0][1]
         print("Key ", jenisObat, " tidak ditemukan")
