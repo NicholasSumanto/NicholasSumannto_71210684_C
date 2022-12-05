@@ -35,8 +35,8 @@ class BinaryTree:
 
     def sumGanjil(self,node,ganjil=[]):
         if node is not None:
-            self.sumGanjil(node.right)
             self.sumGanjil(node.left)
+            self.sumGanjil(node.right)
             if node.data % 2 != 0:
                 ganjil.append(node.data)
         return ganjil
